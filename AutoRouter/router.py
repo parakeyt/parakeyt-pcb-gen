@@ -48,6 +48,7 @@ def routePCB(pcb=pcb1, ses=ses1):
     SES_to_PCB(ses1, pcb1, SCRIPT_DIR / "output.kicad_pcb")
     print("Added traces to PCB.")
     add_ground_plane(SCRIPT_DIR / "output.kicad_pcb", SCRIPT_DIR / "output.kicad_pcb")
+    add_ground_plane(SCRIPT_DIR / "output.kicad_pcb", SCRIPT_DIR / "output.kicad_pcb", layer=pcbnew.B_Cu)
     print("Added ground plane to PCB.")
     return 0
 
