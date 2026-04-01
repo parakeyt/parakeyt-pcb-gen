@@ -6,7 +6,6 @@ from kiutils.footprint import Footprint, FpRect
 from kiutils.items.common import Position, Net
 from kiutils.utils import sexpr
 from pprint import pprint
-from itertools import batched
 import json
 
 MCU_FP = "./components/RP2040-Zero/RP2040-Zero.pretty/rp2040-zero-tht.kicad_mod"
@@ -14,10 +13,49 @@ KEY_FP = "./components/AH49FNTR_G1/AH49FNTR_G1.pretty/SC59_DIO_KeyswitchOutline_
 KEY_MOS_FP = "./components/AH49FNTR_G1/AH49FNTR_G1.pretty/SC59_DIO_KeyswitchOutline_NoRuleArea_mosfet.kicad_mod"
 TLA_FP = "./components/TLA2528IRTER/TLA2528IRTER.pretty/WQFN16_RTE_TEX_with_caps_and_Rs.kicad_mod"
 
+def count(start=0, step=1):
+    # count(10) → 10 11 12 13 14 ...
+    # count(2.5, 0.5) → 2.5 3.0 3.5 ...
+    n = start
+    while True:
+        yield n
+        n += step
+
+def islice(iterable, *args):
+    # islice('ABCDEFG', 2) → A B
+    # islice('ABCDEFG', 2, 4) → C D
+    # islice('ABCDEFG', 2, None) → C D E F G
+    # islice('ABCDEFG', 0, None, 2) → A C E G
+
+    s = slice(*args)
+    start = 0 if s.start is None else s.start
+    stop = s.stop
+    step = 1 if s.step is None else s.step
+    if start < 0 or (stop is not None and stop < 0) or step <= 0:
+        raise ValueError
+
+    indices = count() if stop is None else range(max(start, stop))
+    next_i = start
+    for i, element in zip(indices, iterable):
+        if i == next_i:
+            yield element
+            next_i += step
+
+
+def batched(iterable, n, *, strict=False):
+    # batched('ABCDEFG', 3) → ABC DEF G
+    if n < 1:
+        raise ValueError('n must be at least one')
+    iterator = iter(iterable)
+    while batch := tuple(islice(iterator, n)):
+        if strict and len(batch) != n:
+            raise ValueError('batched(): incomplete batch')
+        yield batch
+
+net_counter = 0
 def generate(config): 
 
     base = Board.create_new()
-    net_counter = 0
     def new_net(s: str) -> Net:
         global net_counter
         return Net(net_counter := net_counter + 1, s)
