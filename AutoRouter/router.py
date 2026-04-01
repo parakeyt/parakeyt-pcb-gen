@@ -7,7 +7,7 @@ from specctraHandler import SES_to_PCB
 
 SCRIPT_DIR = Path(__file__).parent
 router = SCRIPT_DIR / "freerouting-2.1.0.jar"
-pcb1 = str(SCRIPT_DIR / "routerTest.kicad_pcb")
+pcb1 = str(SCRIPT_DIR / "test.kicad_pcb")
 ses1 = SCRIPT_DIR / "output.ses"
 
 # Main PCB routing function
@@ -27,8 +27,8 @@ def routePCB(pcb=pcb1, ses=ses1):
     try:
         result = subprocess.run(
         [java, "-Djava.awt.headless=true", "-jar", str(router),
-        "-de", str(dsn), "-do", str(ses)],
-        check=True, timeout=40, stderr=subprocess.PIPE
+        "-de", str(dsn), "-do", str(ses), "-headless", "-s", "1"],
+        check=True, timeout=420, stderr=subprocess.PIPE
     )
     except subprocess.TimeoutExpired as e:
         print(colored("Autorouter timed out. Adjust PCB or finish routing manually.", 'yellow'))
