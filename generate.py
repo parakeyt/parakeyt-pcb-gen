@@ -72,7 +72,7 @@ def generate(config):
     # with open("config.json", "r") as f:
     #     config = json.load(f)
 
-    width, height = config["width"], config["length"]
+    width, height = config["width"], config["height"]
 
     def find_margins(fp_filepath: str) -> Tuple[Tuple[int, int], Tuple[int, int]]:
         start, end = None, None
