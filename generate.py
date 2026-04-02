@@ -138,6 +138,11 @@ def generate(config):
 
                 fp_start = Position(x+fp_start_off.X, y+fp_start_off.X)
                 fp_end = Position(x+fp_end_off.X, y+fp_end_off.Y)
+
+                if fp_start.X < 0 or fp_start.Y < 0\
+                    or fp_end.Y > height or fp_start.X > width:
+                    continue
+                
                 good = True
             
                 # check for overlap by looking at silkscreen box
