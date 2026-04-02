@@ -76,7 +76,7 @@
   (net 32 "addr20")
 
   (footprint "rp2040-zero-tht" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 286.625 12.75 0)
     (property "Reference" "U?")
     (property "Value" "rp2040-zero-tht")
@@ -121,7 +121,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea_mosfet" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 9.525 9.525 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -226,7 +226,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 28.575000000000003 9.525 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -303,7 +303,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 47.625 9.525 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -380,7 +380,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 66.675 9.525 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -457,7 +457,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 85.72500000000001 9.525 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -534,7 +534,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 104.775 9.525 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -611,7 +611,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 123.825 9.525 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -688,7 +688,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 142.875 9.525 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -765,7 +765,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea_mosfet" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 161.925 9.525 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -870,7 +870,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 180.975 9.525 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -947,7 +947,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 200.025 9.525 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -1024,7 +1024,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 219.07500000000002 9.525 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -1101,7 +1101,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 238.125 9.525 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -1178,7 +1178,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 257.175 9.525 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -1255,7 +1255,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 9.525 28.575000000000003 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -1332,7 +1332,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 33.3375 28.575000000000003 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -1409,7 +1409,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea_mosfet" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 52.3875 28.575000000000003 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -1514,7 +1514,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 71.4375 28.575000000000003 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -1591,7 +1591,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 90.4875 28.575000000000003 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -1668,7 +1668,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 109.53750000000001 28.575000000000003 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -1745,7 +1745,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 128.5875 28.575000000000003 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -1822,7 +1822,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 147.63750000000002 28.575000000000003 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -1899,7 +1899,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 166.6875 28.575000000000003 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -1976,7 +1976,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 185.7375 28.575000000000003 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -2053,7 +2053,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea_mosfet" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 204.7875 28.575000000000003 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -2158,7 +2158,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 223.8375 28.575000000000003 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -2235,7 +2235,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 242.88750000000002 28.575000000000003 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -2312,7 +2312,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 261.9375 28.575000000000003 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -2389,7 +2389,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 9.525 47.625 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -2466,7 +2466,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 38.1 47.625 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -2543,7 +2543,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 57.150000000000006 47.625 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -2620,7 +2620,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 76.2 47.625 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -2697,7 +2697,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea_mosfet" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 95.25 47.625 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -2802,7 +2802,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 114.30000000000001 47.625 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -2879,7 +2879,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 133.35 47.625 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -2956,7 +2956,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 152.4 47.625 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -3033,7 +3033,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 171.45000000000002 47.625 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -3110,7 +3110,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 190.5 47.625 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -3187,7 +3187,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 209.55 47.625 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -3264,7 +3264,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 228.60000000000002 47.625 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -3341,7 +3341,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea_mosfet" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 247.65 47.625 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -3446,7 +3446,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 9.525 66.675 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -3523,7 +3523,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 42.862500000000004 66.675 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -3600,7 +3600,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 61.9125 66.675 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -3677,7 +3677,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 80.9625 66.675 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -3754,7 +3754,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 100.0125 66.675 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -3831,7 +3831,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 119.0625 66.675 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -3908,7 +3908,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 138.1125 66.675 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -3985,7 +3985,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea_mosfet" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 157.1625 66.675 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -4090,7 +4090,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 176.2125 66.675 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -4167,7 +4167,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 195.26250000000002 66.675 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -4244,7 +4244,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 214.3125 66.675 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -4321,7 +4321,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 233.3625 66.675 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -4398,7 +4398,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 9.525 85.72500000000001 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -4475,7 +4475,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 33.3375 85.72500000000001 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -4552,7 +4552,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 52.3875 85.72500000000001 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -4629,7 +4629,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea_mosfet" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 76.2 85.72500000000001 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -4734,7 +4734,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 195.26250000000002 85.72500000000001 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -4811,7 +4811,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 219.07500000000002 85.72500000000001 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -4888,7 +4888,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 238.125 85.72500000000001 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -4965,7 +4965,7 @@
   )
 
   (footprint "SC59_DIO_KeyswitchOutline_NoRuleArea" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
+    (tedit 69cd8450)
     (at 257.175 85.72500000000001 0)
     (tags "AH49FNTR-G1 ")
     (property "Reference" "REF**")
@@ -5042,8 +5042,8 @@
   )
 
   (footprint "WQFN16_RTE_TEX_with_caps_and_Rs" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
-    (at 20.95500000000001 20.95500000000001)
+    (tedit 69cd8450)
+    (at 270.50999999999993 13.335000000000004)
     (tags "TLA2528IRTER ")
     (property "Reference" "REF**")
     (property "Value" "WQFN16_RTE_TEX_with_caps_and_Rs")
@@ -5221,8 +5221,8 @@
   )
 
   (footprint "WQFN16_RTE_TEX_with_caps_and_Rs" (version 20241229) (generator pcbnew) (layer "F.Cu")
-    (tedit 69cd6186)
-    (at 20.95500000000001 32.38500000000001)
+    (tedit 69cd8450)
+    (at 270.50999999999993 3.8100000000000005)
     (tags "TLA2528IRTER ")
     (property "Reference" "REF**")
     (property "Value" "WQFN16_RTE_TEX_with_caps_and_Rs")

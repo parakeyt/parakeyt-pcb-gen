@@ -129,8 +129,10 @@ def generate(config):
             yield x
             x += step
 
-    def place(fp):
+    def place(fp, mcu_fp):
         fp_start_off, fp_end_off = find_margins_fp(fp)
+        best = 10000000000
+        pos = None
     
         # set positions of everything
         for x in float_range(0, width*u, u*0.1):
@@ -140,7 +142,7 @@ def generate(config):
                 fp_end = Position(x+fp_end_off.X, y+fp_end_off.Y)
 
                 if fp_start.X < 0 or fp_start.Y < 0\
-                    or fp_end.Y > height*u or fp_start.X > width*u:
+                    or fp_end.Y > height*u or fp_end.X > width*u:
                     continue
                 
                 good = True
@@ -153,6 +155,7 @@ def generate(config):
                     start = Position(abs.X+start_off.X, abs.Y+start_off.Y)
                     end = Position(abs.X+end_off.X, abs.Y+end_off.Y)
 
+
                     if not (fp_end.X <= start.X or\
                        fp_start.X >= end.X or\
                        fp_end.Y <= start.Y or\
@@ -161,9 +164,13 @@ def generate(config):
                         break
 
                 if good:
-                    return Position(x, y)
+                    dist = ((x-mcu_fp.position.X)**2+(y-mcu_fp.position.Y)**2)**0.5
+                    if dist < best:
+                        best = dist
+                        pos = Position(x, y)
 
-        assert False, "could not find good location"
+        assert pos is not None, "could not find good location"
+        return pos
  
     mcu_x, mcu_y, mcu_rotation = [config["mcu"]["pos"]["x"], config["mcu"]["pos"]["z"], config["mcu"]["pos"]["z"]]
     mcu_start, mcu_end = find_margins(MCU_FP)
@@ -272,9 +279,9 @@ def generate(config):
         for pin in range(18, 24):
             set_net(gpio_fp, pin, gnd)
 
-        adc_fp.position = place(adc_fp)
+        adc_fp.position = place(adc_fp, mcu_fp)
         base.footprints.append(adc_fp)
-        gpio_fp.position = place(gpio_fp)
+        gpio_fp.position = place(gpio_fp, mcu_fp)
         base.footprints.append(gpio_fp)
 
 
