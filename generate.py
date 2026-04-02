@@ -140,7 +140,7 @@ def generate(config):
                 fp_end = Position(x+fp_end_off.X, y+fp_end_off.Y)
 
                 if fp_start.X < 0 or fp_start.Y < 0\
-                    or fp_end.Y > height or fp_start.X > width:
+                    or fp_end.Y > height*u or fp_start.X > width*u:
                     continue
                 
                 good = True
