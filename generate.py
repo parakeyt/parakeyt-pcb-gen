@@ -118,7 +118,6 @@ def generate(config):
     def group_keys(keys: list[dict]) -> list[list[list]]:
         return [list(batched(m, 8)) for m in batched(keys, 64)]
 
-    
         # TODO: implement
         # return [[[keys[0], keys[1], keys[2]], [keys[3], keys[4], keys[5]], [keys[6], keys[7], keys[8]]]]
 
@@ -203,8 +202,17 @@ def generate(config):
             for ci, elem in enumerate(row):
                 key_fp = Footprint.from_file(KEY_FP if ci != 0 else KEY_MOS_FP)
                 # x, y, a = elem["pos"]
-                x, y, a = [elem["x"], elem["y"], elem["z"]]
-                key_fp.position = Position((x+0.5) * u, (y+0.5) * u, a)
+                x, y, a, size = [elem["x"], elem["y"], elem["z"], elem["size"]]
+                key_fp.position = Position(x * u, y * u, a)
+
+                # if width is >4 add at start and end
+                if elem["size"] >= 4:
+                    left = Footprint.from_file(KEY_FP)
+                    right = Footprint.from_file(KEY_FP)
+                    left.position = Position((x-size/2+0.5)*u, y*u, a)
+                    right.position = Position((x+size/2-0.5)*u, y*u, a)
+                    base.footprints.append(left)
+                    base.footprints.append(right)
             
                 if ci == 0:
                     set_net(key_fp, 4, row_nets[ri])
