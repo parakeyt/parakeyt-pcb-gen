@@ -121,7 +121,6 @@ def generate(config):
         # TODO: implement
         # return [[[keys[0], keys[1], keys[2]], [keys[3], keys[4], keys[5]], [keys[6], keys[7], keys[8]]]]
 
-
     def float_range(start, stop, step):
         x = start
         while x < stop:
@@ -184,6 +183,13 @@ def generate(config):
 
 
     matrices = group_keys(config["keys"])
+    with open("pinouts.json", "w") as f:
+        json.dump({
+            "keys": [[[key["label"] for key in row] for row in matrix] for matrix in matrices],
+            "row_pins": [[i for i, _ in enumerate(matrix)] for matrix in matrices],
+            "col_pins": [[*range(max([len(row) for row in matrix]))] for matrix in matrices]
+        }, f)
+
 
     for mi, matrix in enumerate(matrices):
         # create footprints and set positions
