@@ -7,6 +7,7 @@ from kiutils.items.common import Position, Net
 from kiutils.utils import sexpr
 from pprint import pprint
 import json
+from math import sin, cos, pi
 
 MCU_FP = "./components/RP2040-Zero/RP2040-Zero.pretty/rp2040-zero-tht.kicad_mod"
 KEY_FP = "./components/AH49FNTR_G1/AH49FNTR_G1.pretty/SC59_DIO_KeyswitchOutline_NoRuleArea.kicad_mod"
@@ -208,15 +209,19 @@ def generate(config):
             for ci, elem in enumerate(row):
                 key_fp = Footprint.from_file(KEY_FP if ci != 0 else KEY_MOS_FP)
                 # x, y, a = elem["pos"]
-                x, y, a, size = [elem["x"], elem["y"], elem["z"], elem["size"]]
+                x, y, a, size = [elem["x"], elem["y"], (-elem["rotation"]+180)%360, elem["size"]]
                 key_fp.position = Position(x * u, y * u, a)
+                key_fp.attributes.boardOnly = True
 
                 # if width is >4 add at start and end
                 if elem["size"] >= 4:
                     left = Footprint.from_file(KEY_FP)
                     right = Footprint.from_file(KEY_FP)
-                    left.position = Position((x-size/2+0.5)*u, y*u, a)
-                    right.position = Position((x+size/2-0.5)*u, y*u, a)
+                    left.attributes.boardOnly = True
+                    right.attributes.boardOnly = True
+                    r=size/2-0.5
+                    left.position = Position((x+r*cos(-a/180*pi))*u, (y+r*sin(-a/180*pi))*u, a)
+                    right.position = Position((x-r*cos(-a/180*pi))*u, (y-r*sin(-a/180*pi))*u, a)
                     base.footprints.append(left)
                     base.footprints.append(right)
             
@@ -300,6 +305,8 @@ def generate(config):
 
 
     base.graphicItems.append(GrRect(Position(0, 0), Position(width * u, height * u), "Edge.Cuts"))
+    for fp in base.footprints:
+        fp.properties = {key: value for key, value in fp.properties.items() if key != "Reference"}
 
     base.to_file("./test.kicad_pcb")
 

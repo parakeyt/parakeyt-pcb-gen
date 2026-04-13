@@ -8,6 +8,7 @@
 		(at 0.775 3.0428 0)
 		(unlocked yes)
 		(layer "F.SilkS")
+		(hide yes)
 		(uuid "27d7d8cf-6f7b-467c-b689-007de8acba14")
 		(effects
 			(font
@@ -20,6 +21,7 @@
 		(at 3.775 -2.4572 0)
 		(unlocked yes)
 		(layer "F.Fab")
+		(hide yes)
 		(uuid "08b1b480-1299-477e-a1e7-d51610102f97")
 		(effects
 			(font
@@ -637,18 +639,6 @@
 		(layer "F.Fab")
 		(uuid "63ac2e7f-9269-420a-bfa0-ddb41f8d5915")
 	)
-	(fp_text user "${REFERENCE}"
-		(at 0.029 5.5428 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(uuid "a07ad7aa-0425-49d8-b4a3-f3114221007a")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
 	(pad "" np_thru_hole circle
 		(at -5.055 0)
 		(size 1.7 1.7)
@@ -698,38 +688,6 @@
 		(size 0.5588 1.3208)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "f17ef24a-6fa9-4e6a-bd1f-c72b3d90fcc1")
-	)
-	(zone
-		(net 0)
-		(net_name "")
-		(layers "F.Cu" "B.Cu")
-		(uuid "bcf73c77-5399-4409-ae20-92a9996acf11")
-		(hatch edge 0.5)
-		(connect_pads
-			(clearance 0)
-		)
-		(min_thickness 0.25)
-		(filled_areas_thickness no)
-		(keepout
-			(tracks allowed)
-			(vias allowed)
-			(pads allowed)
-			(copperpour not_allowed)
-			(footprints allowed)
-		)
-		(placement
-			(enabled no)
-			(sheetname "")
-		)
-		(fill
-			(thermal_gap 0.5)
-			(thermal_bridge_width 0.5)
-		)
-		(polygon
-			(pts
-				(xy -1.5 -0.5) (xy 1.5 -0.5) (xy 1.5 0.6256) (xy -1.5 0.6256)
-			)
-		)
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/components/AH49FNTR_G1/AH49FNTR_G1.3dshapes/SC59_DIO.step"

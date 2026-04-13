@@ -8,6 +8,7 @@
 		(at 4.5 -1.5 0)
 		(unlocked yes)
 		(layer "F.SilkS")
+		(hide yes)
 		(uuid "b126eb5f-864a-4820-a800-ce179f62eb79")
 		(effects
 			(font
@@ -20,6 +21,7 @@
 		(at 0.5 -4.5 0)
 		(unlocked yes)
 		(layer "F.Fab")
+		(hide yes)
 		(uuid "34ef0869-df26-4817-baf6-11a9335a3327")
 		(effects
 			(font
@@ -213,10 +215,9 @@
 		(layer "F.SilkS")
 		(uuid "a9c8fce8-e175-4653-a60b-33096d369b2f")
 	)
-	(fp_poly
-		(pts
-			(xy 2.3876 0.059499) (xy 2.3876 0.4405) (xy 2.1336 0.4405) (xy 2.1336 0.059499)
-		)
+	(fp_rect
+		(start 2.1336 0.059499)
+		(end 2.3876 0.4405)
 		(stroke
 			(width 0)
 			(type solid)
@@ -315,16 +316,6 @@
 		)
 		(layer "F.Fab")
 		(uuid "10c73950-5a7c-447c-83a1-d3705a5f4f49")
-	)
-	(fp_line
-		(start -1.5748 -0.3048)
-		(end -0.3048 -1.5748)
-		(stroke
-			(width 0.0254)
-			(type solid)
-		)
-		(layer "F.Fab")
-		(uuid "a499e1ab-2cbb-401f-9450-53628deffdb7")
 	)
 	(fp_line
 		(start -1.5748 -0.0976)
@@ -1010,62 +1001,30 @@
 		(layer "F.Fab")
 		(uuid "380f293b-8872-4d39-8df6-218bc8bdd3e1")
 	)
-	(fp_text user "*"
-		(at -2.5146 -1 0)
+	(fp_text user "C C R R"
+		(at -2.5 3 0)
 		(unlocked yes)
 		(layer "F.SilkS")
-		(uuid "e9c9a0a4-dbdb-4cd6-b70e-923694f58dee")
+		(uuid "3c23c95b-0b7a-432f-a663-b7e23a6c550d")
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
+				(thickness 0.1)
 			)
+			(justify left bottom)
 		)
 	)
-	(fp_text user "*"
-		(at -2.5146 -1 0)
+	(fp_text user "DNP DNP DNP DNP"
+		(at -6 6.5 0)
+		(unlocked yes)
 		(layer "F.SilkS")
-		(uuid "f87ac134-8de7-46f6-b11a-3d6c674255ac")
+		(uuid "9e2c6f0e-a09e-4585-bb09-59b7b7549399")
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
+				(thickness 0.1)
 			)
-		)
-	)
-	(fp_text user "${REFERENCE}"
-		(at 0.5 -3 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(uuid "1973070b-ddf0-4968-a92a-4c8bb589ab33")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(fp_text user "*"
-		(at -1.0668 -1 0)
-		(layer "F.Fab")
-		(uuid "d8dc9e40-931e-43eb-a8ca-9757d8353a12")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(fp_text user "*"
-		(at -1.0668 -1 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(uuid "f97b6fdc-0c7b-411d-ad25-4ce9efb679de")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
+			(justify left bottom)
 		)
 	)
 	(pad "1" smd rect
