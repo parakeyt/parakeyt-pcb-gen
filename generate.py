@@ -2,7 +2,7 @@
 # import uuid
 from typing import Tuple
 from kiutils.board import Board, GrRect
-from kiutils.footprint import Footprint, FpRect
+from kiutils.footprint import Footprint, FpRect, FpText
 from kiutils.items.common import Position, Net
 from kiutils.utils import sexpr
 from pprint import pprint
@@ -13,6 +13,8 @@ MCU_FP = "./components/RP2040-Zero/RP2040-Zero.pretty/rp2040-zero-tht.kicad_mod"
 KEY_FP = "./components/AH49FNTR_G1/AH49FNTR_G1.pretty/SC59_DIO_KeyswitchOutline_NoRuleArea.kicad_mod"
 KEY_MOS_FP = "./components/AH49FNTR_G1/AH49FNTR_G1.pretty/SC59_DIO_KeyswitchOutline_NoRuleArea_mosfet.kicad_mod"
 TLA_FP = "./components/TLA2528IRTER/TLA2528IRTER.pretty/WQFN16_RTE_TEX_with_caps_and_Rs.kicad_mod"
+
+Rs=[["0", "DNP"], ["11k", "DNP"], ["33k", "DNP"], ["100k", "DNP"], ["DNP", "DNP"], ["DNP", "11k"], ["DNP", "33k"], ["DNP", "100k"]]
 
 def count(start=0, step=1):
     # count(10) → 10 11 12 13 14 ...
@@ -55,6 +57,8 @@ def batched(iterable, n, *, strict=False):
 
 net_counter = 0
 def generate(config): 
+
+    mcu_index = 0
 
     base = Board.create_new()
     def new_net(s: str) -> Net:
@@ -254,6 +258,10 @@ def generate(config):
         set_net(adc_fp, 8, decap1_net)
         set_net(adc_fp, 11, addr1_net)
 
+        fp_text = next(filter(lambda a: type(a) is FpText and a.text == "DNP DNP DNP DNP", adc_fp.graphicItems))
+        fp_text.text = f"2uF 2uF {Rs[mcu_index][0]} {Rs[mcu_index][1]}"
+        mcu_index += 1
+        
         # C C R R
         # first c is decap net
         set_net(adc_fp, 18, decap1_net) # decap -> gnd
@@ -294,6 +302,11 @@ def generate(config):
         set_net(gpio_fp, 24, addr2_net)
         set_net(gpio_fp, 23, gnd)
 
+
+        fp_text = next(filter(lambda a: type(a) is FpText and a.text == "DNP DNP DNP DNP", gpio_fp.graphicItems))
+        fp_text.text = f"2uF 2uF {Rs[mcu_index][0]} {Rs[mcu_index][1]}"
+        mcu_index += 1
+        
         # thermal vias
         for pin in range(18, 24):
             set_net(gpio_fp, pin, gnd)
@@ -305,8 +318,11 @@ def generate(config):
 
 
     base.graphicItems.append(GrRect(Position(0, 0), Position(width * u, height * u), "Edge.Cuts"))
+    i=0
     for fp in base.footprints:
-        fp.properties = {key: value for key, value in fp.properties.items() if key != "Reference"}
+        # fp.properties = {key: value for key, value in fp.properties.items() if key != "Reference"}
+        fp.properties["Reference"] = f"R{i}"
+        i = i + 1
 
     base.to_file("./test.kicad_pcb")
 
