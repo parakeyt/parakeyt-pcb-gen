@@ -689,6 +689,38 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "f17ef24a-6fa9-4e6a-bd1f-c72b3d90fcc1")
 	)
+	(zone
+		(net 0)
+		(net_name "")
+		(layer "Margin")
+		(uuid "74441500-f16b-43f6-b82c-21f28efd5e98")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(keepout
+			(tracks allowed)
+			(vias allowed)
+			(pads allowed)
+			(copperpour not_allowed)
+			(footprints allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy -1.5 -0.5) (xy 1.5 -0.5) (xy 1.5 0.5) (xy -1.5 0.5)
+			)
+		)
+	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/components/AH49FNTR_G1/AH49FNTR_G1.3dshapes/SC59_DIO.step"
 		(offset
