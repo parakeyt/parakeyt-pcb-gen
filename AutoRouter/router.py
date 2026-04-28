@@ -1,3 +1,8 @@
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from find_pcbnew import ensure_pcbnew
+ensure_pcbnew()
+
 import pcbnew
 from pathlib import Path
 import subprocess
@@ -11,9 +16,10 @@ pcb1 = str(SCRIPT_DIR / "test.kicad_pcb")
 ses1 = SCRIPT_DIR / "output.ses"
 
 # Main PCB routing function
-# pcb: path to kicad_pcb file to be routed
-# ses: file path for output session file
-def routePCB(pcb=pcb1, ses=ses1):
+# pcb: path to kicad_pcb file to be routed, result is saved back to the same file
+def routePCB(pcb: str, java):
+    pcb = Path(pcb)
+    ses = pcb.with_suffix(".ses")
 
     print("Converting PCB to DSN")
     x = pcb2dsn(pcb)
@@ -21,18 +27,15 @@ def routePCB(pcb=pcb1, ses=ses1):
     if not x:
         print("PCB routing failed.")
         return -1
-    
-    dsn = SCRIPT_DIR / 'input.dsn'
-    print("Routing PCB...")
+
+    dsn = pcb.with_suffix(".dsn")
+    print("Routing PCB. This may take a while (up to 7 min), please be patient...")
     try:
         result = subprocess.run(
-        [java, "-Djava.awt.headless=true", "-jar", str(router),
-        "-de", str(dsn), "-do", str(ses), "-headless", "-s", "1"],
-        check=True, timeout=420, stderr=subprocess.PIPE
-    )
-    except subprocess.TimeoutExpired as e:
-        print(colored("Autorouter timed out. Adjust PCB or finish routing manually.", 'yellow'))
-        return 1
+            [java, "-jar", str(router),
+             "-de", str(dsn), "-do", str(ses)],
+            check=True, timeout=420, stderr=subprocess.PIPE
+        )
     except subprocess.CalledProcessError as e:
         print(colored(f"Autorouter failed with exit code {e.returncode}.", "red"))
         if e.stderr:
@@ -45,19 +48,20 @@ def routePCB(pcb=pcb1, ses=ses1):
 
     print("Autorouter Finished")
 
-    SES_to_PCB(ses1, pcb1, SCRIPT_DIR / "output.kicad_pcb")
+    SES_to_PCB(ses, pcb, pcb)
     print("Added traces to PCB.")
-    add_ground_plane(SCRIPT_DIR / "output.kicad_pcb", SCRIPT_DIR / "output.kicad_pcb")
-    add_ground_plane(SCRIPT_DIR / "output.kicad_pcb", SCRIPT_DIR / "output.kicad_pcb", layer=pcbnew.B_Cu)
+    add_ground_plane(pcb, pcb)
+    add_ground_plane(pcb, pcb, layer=pcbnew.B_Cu)
     print("Added ground plane to PCB.")
     return 0
 
 def pcb2dsn(pcb):
-    board = pcbnew.LoadBoard(pcb)
+    pcb = Path(pcb)
+    board = pcbnew.LoadBoard(str(pcb))
     if not board:
         print(colored("ERROR: Could not load board.", "red"))
         return
-    result = pcbnew.ExportSpecctraDSN(board, str(SCRIPT_DIR / 'input.dsn'))
+    result = pcbnew.ExportSpecctraDSN(board, str(pcb.with_suffix(".dsn")))
     if not result:
         print(colored("ERROR: PCB to DSN conversion failed. Please verify that the PCB is valid", 'red'))
     return result
@@ -80,7 +84,7 @@ def add_ground_plane(board_path, output_path, net_name="GND", layer=pcbnew.F_Cu)
 
     # Extract the board outline from Edge.Cuts
     outline = pcbnew.SHAPE_POLY_SET()
-    if not board.GetBoardPolygonOutlines(outline):
+    if not board.GetBoardPolygonOutlines(outline, False):
         raise RuntimeError("Failed to extract board outline. Ensure Edge.Cuts layer forms a closed shape.")
 
     # Build the zone matching the board outline
@@ -113,9 +117,8 @@ def findJava():
 
 
 def main():
-    global java
     java = findJava()
-    routePCB()
+    routePCB(pcb1, java)
 
 if __name__ == "__main__":
     main()

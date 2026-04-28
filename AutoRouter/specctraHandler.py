@@ -1,7 +1,12 @@
 import subprocess
 import pathlib
-import pcbnew
 import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from find_pcbnew import ensure_pcbnew
+ensure_pcbnew()
+
+import pcbnew
 
 def PCB_to_DSN(input_path, output_path):
     board = pcbnew.LoadBoard(input_path)
