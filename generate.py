@@ -307,10 +307,6 @@ def generate(config):
         fp_text.text = f"2uF 2uF {Rs[mcu_index][0]} {Rs[mcu_index][1]}"
         mcu_index += 1
         
-        # thermal vias
-        for pin in range(18, 24):
-            set_net(gpio_fp, pin, gnd)
-
         adc_fp.position = place(adc_fp, mcu_fp)
         base.footprints.append(adc_fp)
         gpio_fp.position = place(gpio_fp, mcu_fp)
